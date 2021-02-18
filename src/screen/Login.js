@@ -5,7 +5,6 @@ import FormContainer from "../components/FormConatiner";
 const Login = ({ history }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  //const [bol, setBol] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -22,7 +21,7 @@ const Login = ({ history }) => {
     history.push('/')
   }
   };
-  // var obj = JSON.parse(localStorage.getItem("userInfo"));
+
 
   return (
     <>
