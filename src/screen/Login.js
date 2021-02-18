@@ -10,12 +10,17 @@ const Login = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     var obj = JSON.parse(localStorage.getItem("userInfo"));
+    if(obj!==null){
     if (obj[0] === name && obj[2] === password) {
       history.push("/api");
     } else {
       //console.log('Invalid creditionals')
       window.alert("invalid credentials");
     }
+  }else{
+    window.alert("Please Register first")
+    history.push('/')
+  }
   };
   // var obj = JSON.parse(localStorage.getItem("userInfo"));
 

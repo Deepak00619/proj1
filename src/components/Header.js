@@ -24,7 +24,9 @@ const Header = () => {
               </LinkContainer>
               
             </NavDropdown>
+            <LinkContainer to='/about'>
             <Nav.Link to='/about'>Company Info</Nav.Link>
+            </LinkContainer>
           </Nav>
           
         </Navbar.Collapse>

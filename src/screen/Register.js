@@ -17,8 +17,8 @@ const Register = ({ history }) => {
     localStorage.setItem("userInfo", JSON.stringify(data));
   };
 
-  var obj = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(obj);
+  //var obj = JSON.parse(localStorage.getItem("userInfo"));
+  //console.log(obj);
 
   return (
     <>

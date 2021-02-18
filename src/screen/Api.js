@@ -3,7 +3,7 @@ import axios from "axios";
 import Data from "../components/Data";
 
 const URL = "/movieList";
-const Register = () => {
+const Register = ({history}) => {
   const [info, setInfo] = useState([]);
 
   //@dec post API 
@@ -16,14 +16,17 @@ const Register = () => {
         sort: "voting",
       });
       setInfo(data.result);
-      console.log(data.result);
+      //console.log(data.result);
     }
     fetchData();
   }, []);
 
+  var obj = JSON.parse(localStorage.getItem("userInfo"));
+  //var size = Object.keys(obj).length;
+
   return (
     <>
-      {info.map((infos, index) => (
+      {obj===null? history.push('/login') : info.map((infos, index) => (
         <Data key={index} infos={infos} />
       ))}
       
@@ -32,3 +35,7 @@ const Register = () => {
 };
 
 export default Register;
+
+// {info.map((infos, index) => (
+//   <Data key={index} infos={infos} />
+// ))}
