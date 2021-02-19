@@ -22,7 +22,7 @@ const Register = ({history}) => {
   }, []);
 
   var obj = JSON.parse(localStorage.getItem("userInfo"));
-  //var size = Object.keys(obj).length;
+ // var size = Object.keys(obj).length;
 
   return (
     <>
@@ -35,7 +35,3 @@ const Register = ({history}) => {
 };
 
 export default Register;
-
-// {info.map((infos, index) => (
-//   <Data key={index} infos={infos} />
-// ))}

@@ -11,7 +11,6 @@ const S1 = styled.div`
   margin-left: 60px;
 `;
 
-
 const Data = ({ infos }) => {
   return (
     <>
